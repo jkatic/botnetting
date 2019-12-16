@@ -2,3 +2,11 @@ language: go
 
 go:
     - 1.11.x
+
+script:
+    - go build slacker/slacker.go
+
+env:
+  global:
+    - GO111MODULE=on
+    - GOARCH=amd64
