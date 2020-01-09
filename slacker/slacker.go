@@ -70,10 +70,10 @@ func respond(rtm *slack.RTM, msg *slack.MessageEvent, prefix string) {
 
 	if acceptedGreetings[text] {
 		if rand.Intn(4) >= 3 {
-			response = "Chookity Pok!"
+			response = "Hey yo!"
 			rtm.SendMessage(rtm.NewOutgoingMessage(response, msg.Channel))
 		} else if rand.Intn(4) < 3 {
-			response = "Pookoty Pok Pok!"
+			response = "Hello!"
 			rtm.SendMessage(rtm.NewOutgoingMessage(response, msg.Channel))
 		}
 	} else if acceptedHowAreYou[text] {
